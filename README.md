@@ -5,7 +5,7 @@
 
 <img width="270" alt="image" src="https://github.com/MARGYYY1231/WordGame/assets/138099922/1fab8162-c8e4-41bc-891e-99e34c12d197">
 
-- A word game made in Python IDLE where given the starting letter the user has five attempts to guess a four or five letter word. This was inspired by a game called lingo. But this game does not have a timer like lingo has so there is no need to hurry :)
+- A word game made in Python IDLE using tkinter where given the starting letter the user has five attempts to guess a four or five letter word. This was inspired by a game called lingo. But this game does not have a timer like lingo has so there is no need to hurry :)
 - If the letter is green then the letter in the correct postion
 - If the letter is yellow then the word contains the letter but it is in the wrong place
 
