@@ -168,8 +168,7 @@ class MyGUI:
     def play4(self, event):
         """Gets the entry and compares it to the answer"""
         if self.row_four < 5:
-            e = self.myentry1.get().upper();
-            print(len(e))
+            e = self.myentry1.get().upper()
             self.correct_length(e, self.word, 4, self.first_letter, self.GridFrame, self.row_four, 8, 4)
             
         self.myentry1.delete(0, tk.END)
@@ -177,8 +176,7 @@ class MyGUI:
     def play5(self, event):
         """Gets the entry and compares it to the answer"""
         if self.row_five < 5:
-            e = self.myentry2.get().upper();
-            print(len(e))
+            e = self.myentry2.get().upper()
             self.correct_length(e, self.word2, 5, self.first_letter2, self.GridFrame2, self.row_five, 6, 3)
             
         self.myentry2.delete(0, tk.END)
@@ -188,19 +186,14 @@ class MyGUI:
         if correct length then would update board otherwise will reveal answer"""
         spell = SpellChecker()
         if len(e) == length and e[0]==first_letter and spell.correction(e) == e:
-            print(ans)
-            print(e)
             if len(ans) == 4:
                 self.updateboard4(e)
             else:
-                print("5 letter")
                 self.updateboard5(e)
         elif len(e) > length:
-            print("Too long")
             #clear board
             self.incorrect(frame, e, ans, length, length, w, h, row_num)
         else:
-            print("Too short")
             #clear board
             self.incorrect(frame, e, ans, len(e), length, w, h, row_num)
 
@@ -259,7 +252,7 @@ class MyGUI:
         self.frame2_title.pack(pady=5)
         self.myentry1 = tk.Entry(self.frame2)
         self.myentry1.bind("<Return>", self.play4)
-        self.myentry1.pack();
+        self.myentry1.pack()
         self.makeGrid4()
         
         frame2_btn1 = tk.Button(frame, text="<- Back",command=lambda:self.show_frame(self.frame1))
@@ -279,7 +272,7 @@ class MyGUI:
         self.frame3_title.pack(pady=5)
         self.myentry2 = tk.Entry(self.frame3)
         self.myentry2.bind("<Return>", self.play5)
-        self.myentry2.pack();
+        self.myentry2.pack()
         self.makeGrid5()
         
         frame2_btn1 = tk.Button(frame, text="<- Back",command=lambda:self.show_frame(self.frame1))
